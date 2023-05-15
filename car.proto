@@ -1,0 +1,17 @@
+syntax = "proto3"
+
+service CarService {
+    rpc List (Void) returns (CarList) {}
+}
+
+message Void {}
+
+message Car {
+    uint32 id = 1;
+    string name = 2;
+    uint32 year = 3;
+}
+
+message CarList {
+    repeated Car car = 1;
+}
